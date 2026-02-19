@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+
+    --background-color1: #ffc917;
+    --background-color2: white;
+    --background-color3: #E6E6E9;
+    --button-color: #0063D3;
+    --text-color1: #0063D3;
+    --text-color2: #003082;
+
+}
+
+body {
+    font-family: sans-serif;
+    /* background-color: var(--background-color1); */
+    color: var(--text-color2);
+}
+
+
+h1 {
+    background-color: var(--background-color1);
+    color: var(--text-color2);
+    font-size: 1em;
+    padding: 1em;
+    margin-top: 0;
+}
+
+#schoolopdracht {
+    color: var(--text-color2);
+}
+
+
+
+input [type="text"] {
+    background-color: red;
+} 
+
+/* input:invalid {
+    background: red;
+} 
+
+ input:valid {
+    background: green
+} */
+
+
+button {
+    background-color: var(--button-color);
+} 
+
+fieldset {
+    border: none;
+}
+
+
