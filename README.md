@@ -15,6 +15,7 @@ Wat ga ik morgen doen?
 Weekly geek, Verder werken 
 
 ## Di 17 feb
+Checkout met Choice
 wat heb ik vandaag gedaan? 
 Weekly Geek, workshop HTML van Victor, HTML afgemaakt, 1 fomulier en begonnen met css
 
