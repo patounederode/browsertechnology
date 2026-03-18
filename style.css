@@ -30,9 +30,9 @@
 
 
 :root {
-    --textcolor-default:#070721;
+    --textcolor-default: light-dark(#070721, white);
     --colorbackground-primary: #ffc917;
-    --colorbackground-default: white;
+    --colorbackground-default: light-dark(white, #070721);
     --colorbackground-secondary: #E6E6E9;
     --color-button-hover: #0063D3;
     --color-button-primary: #0079d3;
@@ -41,66 +41,146 @@
     --colortext-emphasis: #003082;
     --colortext-white: white;
     --colortext-secondary: #6a6a7a;
+    --error-message: #db0029;
 }
 
 
 body {
+    background-color: var(--colorbackground-default);
     font-size: 1em;
     font-family: "--regular";
-    /* background-color: var(--background-color1); */
     color: var(--textcolor-default);
 }
 
+input {
+    font-family: "--regular";
+    font-size: 1em;
+}
+
+
+/* groter dan 40em */
+@media (width > 40em) {
+
+    input {
+        width: 30em;
+    }
+
+    legend {
+        max-width: 30em;
+    }
+
+
+    form {
+        max-width: 30em;
+        margin: auto;
+        display: grid;
+        justify-items: center;
+
+    }
+
+
+    #pattern-twee {
+        width: 40em;
+    }
+
+    fieldset {
+        max-width: 30em;
+    }
+}
+
+
+/* groter dan 50em */
+@media (width > 50em) {
+
+    input {
+        width: 20em;
+    }
+
+    form {
+        max-width: 30em;
+
+    }
+
+    fieldset {
+        max-width: 30em;
+    }
+}
+
+
+
+
+
+
 header {
-    padding: 1em;
+    padding-block: 1em;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .03), 0 10px 20px rgba(0, 0, 0, .04);
     font-family: "--bold";
-      &:hover {
-    background-color:#ffc917;
-    transition: 1s;
+
+    &:hover {
+        background-color: #ffc917;
+        transition: 1s;
     }
 }
 
 
 header svg {
-    fill:#003082;
+    fill: #003082;
     transition: 0.5s;
+    margin-left: 1em;
 }
+
+
 
 form {
-    color: var(--colortext-secondarylight);
-}
-
-
-fieldset {
-    display: grid;
-    gap: 0.5em;
-}
-
-fieldset fieldset legend {
-    padding-top:2em;
-}
-
-fieldset fieldset {
-    padding-top:1em;
+    color: var(--colortext-secondary);
 }
 
 
 #gegevens-overledene {
-    padding: 1em 0 1em;
     font-size: 1.5em;
     font-family: "--bold";
     color: var(--colortext-emphasis);
-  border-bottom: 4px solid #ffc917;
+    border-bottom: 4px solid #ffc917;
+    width: fit-content;
 
 
     &:hover {
-    transition: 0.5s;
-    color:#ffc917;
+        transition: 0.5s;
+        color: #ffc917;
     }
 }
 
-#vulgegevensin{
+/* elke fieldset */
+fieldset {
+    display: grid;
+    gap: 1em;
+    border: none;
+
+}
+
+/* vul gegevens in overledenen */
+#pattern-een legend {
+    padding-block: 1.5em;
+}
+
+/* vul 1 van 3 in */
+#gegevensgemachtigde {
+    font-family: "--bold";
+    color: var(--colortext-emphasis);
+    font-size: 1.5em;
+    border-bottom: 4px solid #ffc917;
+    width: fit-content;
+}
+
+#pattern-twee legend {
+    padding-block: 1em;
+}
+
+
+
+
+
+#vulgegevensin {
     font-family: "--demi";
     color: #404144;
 }
@@ -114,15 +194,15 @@ legend {
 
 
 
-#overlijdensdatum {
+ #overlijdensdatum  {
     font-family: "--bold";
     color: var(--colortext-emphasis);
 }
 
 
 
- #protocolnummer {
-    padding-top: 2em;
+#protocolnummer {
+    padding-top: 1em;
 }
 
 
@@ -141,96 +221,313 @@ input {
 }
 
 
-
-input[type="text"]:user-valid {
+/* 
+input[id="voorletters"]:user-valid {
     border: 2px solid #00a888;
-    background:#f3f3f3;
-} 
+    background: #f3f3f3;
+}
 
 
 
-input[type="text"]:user-invalid {
+input[id="voorletters"]:user-invalid {
     border: 2px solid #db0029;
-} 
+}
+
+input[id="achternaam"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+
+
+
+input[id="bsn"]:user-invalid {
+    border: 2px solid #db0029;
+}
+
+input[id="bsn"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+
+
+
+input[id="achternaam"]:user-invalid {
+    border: 2px solid #db0029;
+}
 
 
 
 input[type="number"]:user-valid {
     border: 2px solid #00a888;
-    background:#f3f3f3;
+    background: #f3f3f3;
 
-} 
+}
 
 input[type="number"]:user-invalid {
     border: 2px solid #db0029;
-} 
+}
 
 
 
 input[type="date"]:user-valid {
     border: 2px solid #00a888;
-    background:#f3f3f3;
-} 
+    background: #f3f3f3;
+}
 
 
 
 input[type="date"]:user-invalid {
     border: 2px solid #db0029;
-} 
+}
 
 
-
-
-input[type="radio"]:user-invalid {
-    border: 2px solid #db0029;
-} 
-
+ */
 
 
 input[type="radio"] {
-   width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  accent-color:#00a888 ;
-} 
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    accent-color: #00a888;
+}
 
 
 input[type="radio"]:checked {
-   width: 20px;
-  height: 20px;
-  accent-color:#00a888 ;
-} 
+    width: 20px;
+    height: 20px;
+    accent-color: #00a888;
+}
+
+
 
 button {
+    display: grid;
+    justify-self: center;
     font-family: "--demi";
     font-size: 1em;
     cursor: pointer;
-    display: grid;
-    justify-self: center;
     background-color: var(--color-button-primary);
     border: 2px;
     padding: 0.5em;
     border-radius: 0.3em;
     color: white;
 
-    &:hover{
+    &:hover {
         background-color: var(--color-button-hover);
     }
 
 }
 
-fieldset {
-    border: none;
+
+/* Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden? */
+html:has(#nietgetrouwd:checked) fieldset[id="éénb"] label{
+color: #d8d8d9;
 }
 
-/* 
-#gegevens:has(input:valid) {
-    background-color: #00a8893a;
-    border-radius: 1em;
-    padding-block:2em;
-    border: 3px solid #00a888;
-} */
-
-#notaris:has(#nee7:checked) + #protocolnummer {
-  display: none;
+html:has(#nietgetrouwd:checked) fieldset[id="éénb"] legend{
+color: #d8d8d9;
 }
+
+html:has(#nietgetrouwd:checked) fieldset[id="éénb"] input {
+display: none;
+}
+/* -------- */
+
+
+/* niet vastgelegd */
+
+/* ------- */
+
+
+/* Had de overledene kinderen?*/
+html:has(#geenkinderen:checked) fieldset[id="éénc"] label{
+color: #d8d8d9;
+}
+
+html:has(#geenkinderen:checked) fieldset[id="éénc"] legend{
+color: #d8d8d9;
+}
+
+html:has(#geenkinderen:checked) fieldset[id="éénc"] input {
+    display: none;
+}
+/* -------- */
+
+
+/* kinderen van kinderen overleden = nee */
+
+
+/* ----- */
+
+
+
+
+/* Had de overledene een testament? */
+#notaris:has(#geentestament:checked)+#protocolnummer label {
+    color: #d8d8d9;
+    pointer-events: none;
+
+}
+
+#notaris:has(#geentestament:checked)+#protocolnummer input {
+     color: #d8d8d9;
+pointer-events: none;
+
+}
+
+
+/* tekst gegevens notaris uit */
+#gegevens-notaris {
+    display: none;
+}
+
+
+/* tekst gegevens notaris aan */
+#notaris:has(#weltestament:checked) #gegevens-notaris {
+    display: block;
+
+}
+
+
+/* -------- */
+
+
+
+/* label pattern twee onder elkaar */
+#pattern-twee label {
+    display: grid;
+}
+
+
+/* bsn-rsin */
+html:has(#bsn-rsin:focus) #beconnummer label {
+    color: #E6E6E9;
+}
+
+html:has(#bsn-rsin:focus) #protocolnummer-notaris label {
+    color: #E6E6E9;
+}
+
+
+/* beconnummer */
+html:has(#beconnummer:focus) #bsn-rsin label {
+    color: #E6E6E9;
+    pointer-events: none;
+}
+
+html:has(#beconnummer:focus) #protocolnummer-notaris label {
+    color: #E6E6E9;
+    pointer-events: none;
+}
+
+
+/* protocolnummer-notaris */
+html:has(#protocolnummer-notaris:focus) #bsn-rsin label {
+    color: #E6E6E9;
+    pointer-events: none;
+}
+
+html:has(#protocolnummer-notaris:focus) #beconnummer label {
+    color: #E6E6E9;
+    pointer-events: none;
+}
+
+input[id="protocolnummer-notaris"]:checked {
+    width: 20px;
+    height: 20px;
+    accent-color: #00a888;
+}
+
+
+input[id="protocolnummer-notaris"]:user-invalid {
+    border-color: #d8d8d9;
+}
+
+#tussenvoegsel-message {
+    color: #6a6a7a89;
+}
+
+
+
+
+
+/* VALIDATIE */
+
+/* pattern één */
+
+
+/* voorletters */
+input[id="voorletters"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="voorletters"]:user-invalid {
+    border: 2px solid #db0029;
+}
+
+
+
+/* achternaam */
+input[id="achternaam"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="achternaam"]:user-invalid {
+    border: 2px solid #db0029;
+}
+
+
+
+
+/* bsn overledene */
+input[id="bsn"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="bsn"]:user-invalid {
+    border: 2px solid #db0029;
+}
+
+
+
+/* overlijdensdatum */
+input[id="overlijdensdatum"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="overlijdensdatum"]:user-invalid {
+    border: 2px solid #db0029;
+}
+
+
+
+
+
+
+
+/* pattern twee */
+input[id="bsn-rsin"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+
+input[id="beconnummer"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="protocolnummer-notaris"]:user-valid {
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+/* _____ */
+
+
