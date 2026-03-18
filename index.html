@@ -47,21 +47,21 @@
 
                         <label for="voorletters">Voorletter(s)</label>
                         <input required type="text" name="voorletter" id="voorletters">
-                         <span>Vul de eerste letter(s) van de voornaam in, zoals op het identiteitsbewijs (bijv. J.P.)</span>
+                         <span class="error">Vul de eerste letter(s) van de voornaam in, zoals op het identiteitsbewijs (bijv. J.P.)</span>
 
                         <label for="tussenvoegsel">Tussenvoegsel(s)</label>
                         <input type="text" name= "tussenvoegsel" id="tussenvoegsel">
-                         <span id="tussenvoegsel-message">Eventuele tussenvoegsels zoals ‘van’, ‘de’, ‘van der’ (laat leeg als niet van toepassing)</span>
+                         <span class="error" id="tussenvoegsel-message">Eventuele tussenvoegsels zoals ‘van’, ‘de’, ‘van der’ (laat leeg als niet van toepassing)</span>
                      
 
                         <label for="achternaam"> Achternaam </label>
                         <input required type="text" name="achternaam" id="achternaam">
-                         <span>Vul de officiële achternaam in zoals op het identiteitsbewijs</span>
+                         <span class="error">Vul de officiële achternaam in zoals op het identiteitsbewijs</span>
                   
 
                        <label for="bsn">Bsn overledene</label>
                         <input required type="number" name="bsn" id="bsn" minlength="9" maxlength="9">
-                         <span>Vul het 9-cijferige burgerservicenummer in (zonder spaties of punten)</span>
+                         <span class="error">Vul het 9-cijferige burgerservicenummer in (zonder spaties of punten)</span>
             </fieldset>
             
 
@@ -139,7 +139,7 @@
              
 
             <!-- 1c -->
-            <fieldset>
+            <fieldset id="kinderen">
                 <legend>Had de overledene kinderen?</legend>
 
                     <label for="welkinderen">
@@ -215,7 +215,7 @@
             <fieldset id="protocolnummer">
                 <label for="protocolnummer" id="protocolnummer">
                     Protocolnummer notaris</label>
-                    <input required 
+                    <input  
                     type="number" 
                     name="protocolnummer" 
                     minlength="6" 
@@ -223,7 +223,7 @@
 
                 <label for="naam-notaris">
                     Voorletter(s)</label>
-                    <input required type="text" name="naam-notaris" id="naam-notaris">
+                    <input  type="text" name="naam-notaris" id="naam-notaris">
 
 
                 <label for="tussenvoegsel-notaris">
@@ -234,7 +234,7 @@
               <label for="datumnotaris">
                 Datum
               </label>
-                  <input required type="date" id="datumnotaris">
+                  <input  type="date" id="datumnotaris">
 
             </fieldset>
 
@@ -256,7 +256,7 @@
                 Bsn of RSIN nummer
                 <input type="number" name="bsn-rsin" id="bsn-rsin" minlength="9" maxlength="9">
             </label>
-              <span>De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet</span>
+              <span class="error">De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet</span>
 
         </fieldset>
 
@@ -286,6 +286,7 @@
     
         <button type="submit">Verzend</button>
       </form>
+
     </main>
 
 	<script src="script.js"></script>
