@@ -118,12 +118,16 @@ Verder valideren en tweede pattern toevoegen, deze stylen en werkend maken
 Wat heb ik vandaag gedaan? 
 Tweede pattern toegevoegd (vul 1 van de 3 in) en een oplossing gezocht om deze goed te kunnen uitvoeren
 
+![Tweede pattern toegevoegd in html](<images/Scherm­afbeelding 2026-03-19 om 13.16.53.png>)
+
 Wat heb ik geleerd? 
 Om een oplossing te zoeken hoe het voor de gebruiker duidelijk is wat er ingevuld moet worden, en deze oplossing toegepast
 
 ## Wo 18 mrt 
 Wat heb ik vandaag gedaan? 
 Meer details toegevoegd voor validatie, zoals radiobuttons styling (als ze invalid zijn).
+
+![Ipv required](<images/Scherm­afbeelding 2026-03-19 om 13.13.34.png>)
 
 
 bronnen:
