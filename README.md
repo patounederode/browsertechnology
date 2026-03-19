@@ -130,7 +130,7 @@ bronnen:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/readonly
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage
-CHATGPT prompt JS: ik heb inputvelden met een <span class="error">, hoe toon/verberg ik die op basis van validatie?
+CHATGPT prompt JS: ik heb inputvelden met een span class= error, hoe toon/verberg ik die op basis van validatie?
 
 
 
