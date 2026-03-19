@@ -13,6 +13,8 @@
 <body>
 
     <header>
+
+
         <svg
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +30,17 @@
      id="path25442"
      style="fill-opacity:1;fill-rule:evenodd;stroke:none" />
 </svg>
+
+<!-- logo:https://upload.wikimedia.org/wikipedia/commons/3/3d/Logo_NS.svg -->
+
        <!-- <h1>Schoolopdracht</h1> -->
+
+
     </header>
 
 
     <main>
+
         <form>
     
    
@@ -42,27 +50,27 @@
                 <legend id="gegevens-overledene">Gegevens van de overledene</legend>
               
         <!-- 1a -->
-           <fieldset id="gegevens">
-                <legend id="vulgegevensin"> Vul hier de gegevens in van de overledene</legend>
+        <fieldset id="gegevens">
+            <legend id="vulgegevensin"> Vul hier de gegevens in van de overledene</legend>
 
-                        <label for="voorletters">Voorletter(s)</label>
-                        <input required type="text" name="voorletter" id="voorletters">
-                         <span class="error">Vul de eerste letter(s) van de voornaam in, zoals op het identiteitsbewijs (bijv. J.P.)</span>
+               <label for="voorletters">Voorletter(s)</label>
+               <input required type="text" name="voorletter" id="voorletters">
+               <span class="error">Vul de eerste letter(s) van de voornaam in, zoals op het identiteitsbewijs (bijv. J.P.)</span>
 
-                        <label for="tussenvoegsel">Tussenvoegsel(s)</label>
-                        <input type="text" name= "tussenvoegsel" id="tussenvoegsel">
-                         <span class="error" id="tussenvoegsel-message">Eventuele tussenvoegsels zoals ‘van’, ‘de’, ‘van der’ (laat leeg als niet van toepassing)</span>
+               <label for="tussenvoegsel">Tussenvoegsel(s)</label>
+                <input type="text" name= "tussenvoegsel" id="tussenvoegsel">
+                <span class="error" id="tussenvoegsel-message">Eventuele tussenvoegsels zoals ‘van’, ‘de’, ‘van der’ (laat leeg als niet van toepassing)</span>
                      
 
-                        <label for="achternaam"> Achternaam </label>
-                        <input required type="text" name="achternaam" id="achternaam">
-                         <span class="error">Vul de officiële achternaam in zoals op het identiteitsbewijs</span>
+                <label for="achternaam"> Achternaam </label>
+                 <input required type="text" name="achternaam" id="achternaam">
+                 <span class="error">Vul de officiële achternaam in zoals op het identiteitsbewijs</span>
                   
 
-                       <label for="bsn">Bsn overledene</label>
-                        <input required type="number" name="bsn" id="bsn" minlength="9" maxlength="9">
-                         <span class="error">Vul het 9-cijferige burgerservicenummer in (zonder spaties of punten)</span>
-            </fieldset>
+                <label for="bsn">Bsn overledene</label>
+                <input required type="number" name="bsn" id="bsn" minlength="9" maxlength="9">
+                 <span class="error">Vul het 9-cijferige burgerservicenummer in (zonder spaties of punten)</span>
+          </fieldset>
             
 
             <fieldset id="gegevens">
@@ -97,38 +105,47 @@
 
 
                   <label for="welvastgelegd">
-                <input type="radio" name="huwelijksevoorwaarden" id="welvastgelegd">
-                Ja. Stuur kopie van de akte mee met de aangifte.
-                </label>
+                       <input type="radio" name="huwelijksevoorwaarden" id="welvastgelegd">
+                         Ja. Stuur kopie van de akte mee met de aangifte.
+                 </label>
 
 
                 <label for="nietvastgelegd">
-                <input required type="radio" name="huwelijksevoorwaarden" id="nietvastgelegd">
-                Nee
+                      <input required type="radio" name="huwelijksevoorwaarden" id="nietvastgelegd">
+                      Nee
                 </label>
+
             </fieldset>
 
 
 
             <fieldset id="éénb">
+
                 <legend>Hadden de overledene en diens partner een finaal
                 verrekenbeding?</legend>
+
                 
-                <label for="welverrekenbeding">
-                    <input required type="radio" name="verrekenbeding" id="welverrekenbeding">
+                 <label for="welverrekenbeding">
+                     <input required type="radio" name="verrekenbeding" id="welverrekenbeding">
                     Ja
                 </label>
+
 
                 <label for="geenverrekenbeding">
                     <input type="radio" name="verrekenbeding" id="geenverrekenbeding">
                     Nee
                 </label>
+            
+
             </fieldset>
 
     
 
+
             <fieldset id="éénb">
+
                 <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+
                 <label>
                     <input required type="date">
                 </label>
@@ -140,53 +157,61 @@
 
             <!-- 1c -->
             <fieldset id="kinderen">
+
                 <legend>Had de overledene kinderen?</legend>
 
-                    <label for="welkinderen">
-                    <input required type="radio" name="overledene-kind" id="welkinderen" value="ja">
+                <label for="welkinderen">
+                     <input required type="radio" name="overledene-kind" id="welkinderen" value="ja">
                     Ja
-                </label>
+                 </label>
+
 
                  <label for="geenkinderen">
                     <input  type="radio" name="overledene-kind" id="geenkinderen" value="nee">
                     Nee
                 </label>
 
+
             </fieldset>
 
             
             
             
             <fieldset id="éénc">
+
                 <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
 
                    <label for="weloverleden">
-                    <input type="radio" name="kind-eerder" id="weloverleden" value="ja">
-                       Ja
-                        </label>
+                         <input type="radio" name="kind-eerder" id="weloverleden" value="ja">
+                           Ja
+                    </label>
 
 
                  <label for="nietoverleden">
-                    <input required type="radio" name="kind-eerder" id="nietoverleden" value="nee">
-                    Nee
+                        <input required type="radio" name="kind-eerder" id="nietoverleden" value="nee">
+                         Nee
                 </label>
+
+
             </fieldset>
 
 
 
 
             <fieldset id="éénc">
+
                 <legend>Had dit overleden kind zelf kinderen?</legend>
 
-                 <label for="geenkinderen">
-                    <input required type="radio" name="zelf-kinderen" id="geenkinderen" value="nee">
-                    Nee
-                </label>
-                  
-                <label for="welkinderen">
-                    <input type="radio" name="zelf-kinderen" id="welkinderen" value="ja">
-                    Ja
-                </label>
+                    <label for="geenkinderen">
+                         <input required type="radio" name="zelf-kinderen" id="geenkinderen" value="nee">
+                        Nee
+                     </label>
+                   
+                    <label for="welkinderen">
+                         <input type="radio" name="zelf-kinderen" id="welkinderen" value="ja">
+                         Ja
+                    </label>
+
             </fieldset>
 
 
@@ -194,100 +219,124 @@
 
             <!-- 1d -->
             <fieldset id="notaris">
+
                 <legend>Had de overledene een testament?</legend>
 
-                 <label for="geentestament">
+                <label for="geentestament">
                     <input required type="radio" name="testament" id="geentestament" value="nee">
                     Nee
                 </label>
+
                   
                 <label for="weltestament">
                     <input type="radio" name="testament" id="weltestament" value="ja">
                     Ja
                 </label>
-                     <span id="gegevens-notaris">Vul de gegevens in van de notaris die het testament heeft opgemaakt en de
-                    datum van het testament.</span>
+
+                <span id="gegevens-notaris">Vul de gegevens in van de notaris die het testament heeft opgemaakt en de
+                 datum van het testament.</span>
+
+
             </fieldset>
 
 
 
 
             <fieldset id="protocolnummer">
+
+
                 <label for="protocolnummer" id="protocolnummer">
                     Protocolnummer notaris</label>
-                    <input  
-                    type="number" 
-                    name="protocolnummer" 
-                    minlength="6" 
-                    maxlength="6" >
+             <input  type="number" name="protocolnummer" minlength="6" maxlength="6">
+
+
+
+
 
                 <label for="naam-notaris">
-                    Voorletter(s)</label>
-                    <input  type="text" name="naam-notaris" id="naam-notaris">
+                Voorletter(s)</label>
+                <input  type="text" name="naam-notaris" id="naam-notaris">
+
+
 
 
                 <label for="tussenvoegsel-notaris">
                 Tussenvoegsel(s) </label>
-                 <input type="text" name="tussenvoegsel-notaris" id="tussenvoegsel-notaris">
+                <input type="text" name="tussenvoegsel-notaris" id="tussenvoegsel-notaris">
 
 
-              <label for="datumnotaris">
+
+
+                 <label for="datumnotaris">
                 Datum
-              </label>
-                  <input  type="date" id="datumnotaris">
+                 </label>
+                <input  type="date" id="datumnotaris">
+
 
             </fieldset>
 
      
-  </fieldset>  
+ </fieldset>  
   <!-- pattern 1 -->
 
 
 
-        <!-- pattern 2 -->
-        <!-- vul 1 van de 3 in -->
+<!-- pattern 2 -->
+ <!-- vul 1 van de 3 in -->
 <fieldset id="pattern-twee">
 
     <legend id="gegevensgemachtigde">Gegevens gemachtigde</legend>
 
         <fieldset id="bsn-rsin">
+
            <legend>Vul 1 van de 3 onderstaande gegevens in</legend>
+
+
             <label for="bsn-rsin">
                 Bsn of RSIN nummer
                 <input type="number" name="bsn-rsin" id="bsn-rsin" minlength="9" maxlength="9">
             </label>
-              <span class="error">De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet</span>
+
+            <span class="error">De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet</span>
 
         </fieldset>
 
 
 
          <fieldset id="beconnummer">
+
             <label for="beconnummer">
                 Beconnummer
                 <input type="number"  name="beconnummer" id="beconnummer" minlength="6" maxlength="6">
             </label>
+
         </fieldset>
 
 
 
          <fieldset id="protocolnummer-notaris">
+
             <label for="protocolnummer-notaris">
                 Protocolnummer Notaris
                 <input type="number" name="protocolnummer-notaris" id="protocolnummer-notaris" minlength="6" maxlength="6">
             </label>
         
-        </fieldset>
+ </fieldset>
 
         
-
 </fieldset>
-       <!-- pattern 2 -->
-    
+<!-- --- -->
+
+
+
         <button type="submit">Verzend</button>
-      </form>
+      
+    
+    </form>
+
+
 
     </main>
-
+    
 	<script src="script.js"></script>
 </body>

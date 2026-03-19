@@ -52,9 +52,48 @@ body {
     color: var(--textcolor-default);
 }
 
+header {
+    padding-block: 1em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .03), 0 10px 20px rgba(0, 0, 0, .04);
+    font-family: "--bold";
+
+    &:hover {
+        background-color: #ffc917;
+        transition: 1s;
+    }
+}
+
+
+header svg {
+    fill: #003082;
+    transition: 0.5s;
+    margin-left: 1em;
+}
+
+
+
+form {
+    color: var(--colortext-secondary);
+}
+
+
 input {
     font-family: "--regular";
     font-size: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 2px solid #d8d8d9;
+    max-width: 50em;
+}
+
+
+
+/* elke fieldset */
+fieldset {
+    display: grid;
+    gap: 1em;
+    border: none;
+
 }
 
 
@@ -108,34 +147,6 @@ input {
 
 
 
-
-
-
-header {
-    padding-block: 1em;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .03), 0 10px 20px rgba(0, 0, 0, .04);
-    font-family: "--bold";
-
-    &:hover {
-        background-color: #ffc917;
-        transition: 1s;
-    }
-}
-
-
-header svg {
-    fill: #003082;
-    transition: 0.5s;
-    margin-left: 1em;
-}
-
-
-
-form {
-    color: var(--colortext-secondary);
-}
-
-
 #gegevens-overledene {
     font-size: 1.5em;
     font-family: "--bold";
@@ -148,14 +159,6 @@ form {
         transition: 0.5s;
         color: #ffc917;
     }
-}
-
-/* elke fieldset */
-fieldset {
-    display: grid;
-    gap: 1em;
-    border: none;
-
 }
 
 /* vul gegevens in overledenen */
@@ -178,8 +181,6 @@ fieldset {
 
 
 
-
-
 #vulgegevensin {
     font-family: "--demi";
     color: #404144;
@@ -194,7 +195,7 @@ legend {
 
 
 
- #overlijdensdatum  {
+#overlijdensdatum  {
     font-family: "--bold";
     color: var(--colortext-emphasis);
 }
@@ -213,12 +214,6 @@ label {
 
 
 
-input {
-    padding: 1em;
-    border-radius: 0.5em;
-    border: 2px solid #d8d8d9;
-    max-width: 50em;
-}
 
 
 /* 
@@ -240,7 +235,6 @@ input[id="achternaam"]:user-valid {
 
 
 
-
 input[id="bsn"]:user-invalid {
     border: 2px solid #db0029;
 }
@@ -252,11 +246,9 @@ input[id="bsn"]:user-valid {
 
 
 
-
 input[id="achternaam"]:user-invalid {
     border: 2px solid #db0029;
 }
-
 
 
 input[type="number"]:user-valid {
@@ -275,7 +267,6 @@ input[type="date"]:user-valid {
     border: 2px solid #00a888;
     background: #f3f3f3;
 }
-
 
 
 input[type="date"]:user-invalid {
@@ -336,9 +327,6 @@ display: none;
 /* -------- */
 
 
-/* niet vastgelegd */
-
-/* ------- */
 
 
 /* Had de overledene kinderen?*/
@@ -368,7 +356,6 @@ html:has(#geenkinderen:checked) fieldset[id="éénc"] input {
 #notaris:has(#geentestament:checked)+#protocolnummer label {
     color: #d8d8d9;
     pointer-events: none;
-
 }
 
 #notaris:has(#geentestament:checked)+#protocolnummer input {
@@ -376,7 +363,6 @@ html:has(#geenkinderen:checked) fieldset[id="éénc"] input {
 pointer-events: none;
 
 }
-
 
 /* tekst gegevens notaris uit */
 #gegevens-notaris {
@@ -389,8 +375,6 @@ pointer-events: none;
     display: block;
 
 }
-
-
 /* -------- */
 
 
@@ -457,7 +441,6 @@ input[id="protocolnummer-notaris"]:user-invalid {
 
 /* pattern één */
 
-
 /* voorletters */
 input[id="voorletters"]:user-valid {
     border: 2px solid #00a888;
@@ -481,7 +464,38 @@ input[id="achternaam"]:user-invalid {
 }
 
 
+/* radiobuttons */
+#getrouwd:has(input:user-invalid) label {
+  border: 2px solid #db0029;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
 
+#éénb:has(input:user-invalid) label {
+  border: 2px solid #db0029;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+#kinderen:has(input:user-invalid) label {
+  border: 2px solid #db0029;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+#éénc:has(input:user-invalid) label {
+  border: 2px solid #db0029;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+
+#notaris:has(input:user-invalid) label {
+  border: 2px solid #db0029;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+/* ----- */
 
 /* bsn overledene */
 input[id="bsn"]:user-valid {
@@ -505,29 +519,13 @@ input[id="overlijdensdatum"]:user-invalid {
     border: 2px solid #db0029;
 }
 
-
-
-
-
-
-
-/* pattern twee */
-input[id="bsn-rsin"]:user-valid {
-    border: 2px solid #00a888;
-    background: #f3f3f3;
-}
-
-
-input[id="beconnummer"]:user-valid {
-    border: 2px solid #00a888;
-    background: #f3f3f3;
-}
-
-input[id="protocolnummer-notaris"]:user-valid {
-    border: 2px solid #00a888;
-    background: #f3f3f3;
-}
-
 /* _____ */
+
+
+/* error message */
+span {
+  display: none;
+  color: #db0029;
+}
 
 

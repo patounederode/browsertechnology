@@ -13,13 +13,32 @@ Wat Fieldsets legends en labels zijn en hoe je ze op de juiste manier gebruikt
 Wat ga ik morgen doen?
 Weekly geek voorbereiden, html verder aanvullen
 
+
+Notities
+name
+* Groepeert radio buttons
+* Met dezelfde name kun je er maar één kiezen
+* Wordt meegestuurd bij submit
+* ➜ Naam van de vraag (voor formulier/server)
+value
+* De waarde van het gekozen antwoord
+* Wordt samen met name verstuurd
+id
+* Unieke naam voor één element
+* Nodig voor <label for="">, JavaScript en CSS
+label for=""
+* Koppelt tekst aan input
+* Klikken op tekst = radio wordt aangeklikt
+* Beter voor toegankelijkheid
+
+
 ## Di 17 feb
 Checkout met Choice
 wat heb ik vandaag gedaan? 
 WEEKLY GEEK notities:
 Consistentie is belangrijk in interface, het is meestal beter om alleen een icoon te gebruiken als hier een goed metafoor voor is. Anders kan het juist voor meer verwarring zorgen dan voor duidelijkheid.
 
-Workshop HTML van Victor, HTML pagina 1 afgemaakt, enbegonnen  met css
+Workshop HTML van Victor, HTML pagina 1 afgemaakt, en begonnen  met css
 
 Hoe lang duurde het? 
 Weekly Geek workshop ongeveer 3 uur, 3 uur aan code
@@ -86,7 +105,7 @@ Deze week heb ik vooral gewerkt aan de styling van mijn formulier. Ik heb gemerk
 # LAATSTE WEEK
 
 ## Ma 16 mrt
-wat heb ik vandaag gedaan? 
+Wat heb ik vandaag gedaan? 
 Formulier responsive gemaakt, styling en details toegepast
 
 Hoe lang was ik hiermee bezig?
@@ -96,18 +115,27 @@ Wat ga ik morgen doen?
 Verder valideren en tweede pattern toevoegen, deze stylen en werkend maken
 
 ## Di 17 mrt
-wat heb ik vandaag gedaan? 
+Wat heb ik vandaag gedaan? 
 Tweede pattern toegevoegd (vul 1 van de 3 in) en een oplossing gezocht om deze goed te kunnen uitvoeren
 
 Wat heb ik geleerd? 
 Om een oplossing te zoeken hoe het voor de gebruiker duidelijk is wat er ingevuld moet worden, en deze oplossing toegepast
 
 ## Wo 18 mrt 
-wat heb ik vandaag gedaan? 
+Wat heb ik vandaag gedaan? 
 Meer details toegevoegd voor validatie, zoals radiobuttons styling (als ze invalid zijn).
 
+
+bronnen:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/readonly
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage
+CHATGPT prompt JS: ik heb inputvelden met een <span class="error">, hoe toon/verberg ik die op basis van validatie?
+
+
+
 ## EINDREFLECTIE 
-Met dit vak heb ik geleerd hoe ik een printformulier omzet naar een webversie met HTML, door gebruik te maken van fieldsets, labels en inputs. En weet ik nu hoe ik het formulier duidelijk kan stylen zodat het voor voor de gebruiker duidelijk is wat er ingevuld moet worden. 
+Met dit vak heb ik geleerd hoe ik een printformulier omzet naar een webversie met HTML, door gebruik te maken van fieldsets, labels en inputs. En weet nu ik hoe ik het formulier duidelijk kan stylen zodat het voor voor de gebruiker duidelijk is wat er ingevuld moet worden. 
 
 Ik heb geleerd hoe ik kan valideren, hoe je ervoor zorgt dat een gebruiker feedback krijgt en hoe ik het formulier zo gebruiksvriendelijk mogelijk maak.
 
