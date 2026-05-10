@@ -529,3 +529,27 @@ span {
 }
 
 
+
+
+/* disabled maken */
+
+
+fieldset.disabled-group input {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+fieldset.disabled-group label {
+    color: #999;
+    cursor: not-allowed;
+}
+
+fieldset.disabled-group input {
+    background-color: #eee;  /* grijs veld */
+    cursor: not-allowed;
+}
+
+fieldset.disabled-group label {
+    color: #999;  /* grijze tekst voor label */
+    cursor: not-allowed;
+}

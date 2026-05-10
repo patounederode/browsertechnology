@@ -146,3 +146,8 @@ Ik heb geleerd hoe ik kan valideren, hoe je ervoor zorgt dat een gebruiker feedb
 Daarnaast heb ik gemerkt dat structuur in mijn code heel belangrijk is. Door duidelijke namen te gebruiken voor id’s en classes blijft de code overzichtelijk en is het makkelijker om aan te passen.
 
 Ik had mijn validatie graag nog verder willen verbeteren en het formulier perfect willen maken. Hier had ik alleen minder tijd voor dan gedacht, waardoor ik niet alles zo ver kon uitwerken als ik had gewild. 
+
+# Herkansing
+Aangepast:
+Alle velden correct gelinkt aan hun labels. Validatie toegevoegd voor BSN, beconnummer en protocolnummers.Bij de vraag “Had de overledene een testament?” worden de notarisvelden automatisch disabled en grijs als de gebruiker “Nee” kiest, en weer enabled als “Ja” wordt gekozen.Als een gebruiker één van de drie velden (BSN, Becon, Protocolnummer) invult, worden de andere twee automatisch disabled gemaakt, zodat de gebruiker niet meerdere opties tegelijk invult.
+CSS toegevoegd zodat disabled velden en labels duidelijk visueel aangeven dat ze niet ingevuld kunnen worden.
