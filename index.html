@@ -47,8 +47,9 @@
 
                 <!-- Overlijdensdatum -->
                 <fieldset id="overlijdensdatum">
-                    <legend>Overlijdensdatum</legend>
+
                     <label for="overlijdensdatum-input">
+                        Overlijdensdatum
                         <input required type="date" id="overlijdensdatum-input" name="overlijdensdatum">
                     </label>
                 </fieldset>
@@ -100,8 +101,9 @@
 
                 <!-- Datum huwelijkse voorwaarden -->
                 <fieldset id="éénb3">
-                    <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+               
                     <label for="datum-voorwaarden">
+                        <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                         <input required type="date" id="datum-voorwaarden" name="datum-voorwaarden">
                     </label>
                 </fieldset>
@@ -141,16 +143,16 @@
                 <!-- Notaris gegevens -->
                 <fieldset id="protocolnummer">
                     <label for="protocolnummer-input">Protocolnummer notaris</label>
-                    <input type="number" name="protocolnummer" id="protocolnummer-input" min="100000" max="999999">
+                    <input required type="number" name="protocolnummer" id="protocolnummer-input" min="3" max="10">
 
                     <label for="naam-notaris">Voorletter(s) notaris</label>
-                    <input type="text" name="naam-notaris" id="naam-notaris">
+                    <input required type="text" name="naam-notaris" id="naam-notaris">
 
                     <label for="tussenvoegsel-notaris">Tussenvoegsel(s) notaris</label>
                     <input type="text" name="tussenvoegsel-notaris" id="tussenvoegsel-notaris">
 
                     <label for="datumnotaris">Datum testament</label>
-                    <input type="date" id="datumnotaris" name="datumnotaris">
+                    <input required type="date" id="datumnotaris" name="datumnotaris">
                 </fieldset>
 
             </fieldset> <!-- einde pattern 1 -->

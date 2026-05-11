@@ -134,6 +134,7 @@ bronnen:
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/readonly
 https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/pointer-events
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
 CHATGPT prompt JS: ik heb inputvelden met een span class= error, hoe toon/verberg ik die op basis van validatie?
 
 
@@ -151,3 +152,32 @@ Ik had mijn validatie graag nog verder willen verbeteren en het formulier perfec
 Aangepast:
 Alle velden correct gelinkt aan hun labels. Validatie toegevoegd voor BSN, beconnummer en protocolnummers.Bij de vraag “Had de overledene een testament?” worden de notarisvelden automatisch disabled en grijs als de gebruiker “Nee” kiest, en weer enabled als “Ja” wordt gekozen.Als een gebruiker één van de drie velden (BSN, Becon, Protocolnummer) invult, worden de andere twee automatisch disabled gemaakt, zodat de gebruiker niet meerdere opties tegelijk invult.
 CSS toegevoegd zodat disabled velden en labels duidelijk visueel aangeven dat ze niet ingevuld kunnen worden.
+
+```javascript
+// selecteer de radio buttons
+const testamentJa = document.getElementById('weltestament');
+const testamentNee = document.getElementById('geentestament');
+
+// selecteer alle velden in het notaris fieldset
+const notarisVelden = Array.from(document.querySelectorAll('#protocolnummer input'));
+const notarisFieldset = document.getElementById('protocolnummer'); // voor labels grijs maken
+
+// functie om notaris-velden aan/uit te zetten
+function toggleNotarisVelden() {
+    if (testamentJa.checked) {
+        // aanzetten
+        notarisVelden.forEach(v => v.disabled = false);
+        notarisFieldset.classList.remove('disabled-group');
+    } else {
+        // uitzetten
+        notarisVelden.forEach(v => v.disabled = true);
+        notarisFieldset.classList.add('disabled-group');
+    }
+}
+
+// event listeners
+testamentJa.addEventListener('change', toggleNotarisVelden);
+testamentNee.addEventListener('change', toggleNotarisVelden);
+```
+![](/images/disabled2.png)
+![](/images/disabled.png)

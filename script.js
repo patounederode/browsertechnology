@@ -1,12 +1,4 @@
-// const voorletters = document.getElementById("voorletters");
 
-// voorletters.addEventListener("input", () => {
-//   if (voorletters.value === "") {
-//     voorletters.setCustomValidity("Vul je voorletter(s) in");
-//   } else {
-//     voorletters.setCustomValidity("");
-//   }
-// });
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage
 
 
@@ -33,7 +25,7 @@ document.querySelectorAll("input").forEach(input => {
 // Prompt chatgpt: Ik heb inputvelden met een <span class="error">, hoe toon/verberg ik die op basis van validatie?
 
 
-// DISABELD MAKEN NOTARIS LIJSTJE
+// CHATGPT
 // selecteer de radio buttons
 const testamentJa = document.getElementById('weltestament');
 const testamentNee = document.getElementById('geentestament');
@@ -42,22 +34,29 @@ const testamentNee = document.getElementById('geentestament');
 const notarisVelden = Array.from(document.querySelectorAll('#protocolnummer input'));
 const notarisFieldset = document.getElementById('protocolnummer'); // voor labels grijs maken
 
-// functie om alles in het notaris veldset uit/inschakelen
-function toggleNotarisVelden(disable) {
-    notarisVelden.forEach(v => v.disabled = disable);
-    if(disable) {
-        notarisFieldset.classList.add('disabled-group');
-    } else {
+// functie om notaris-velden aan/uit te zetten
+function toggleNotarisVelden() {
+    if (testamentJa.checked) {
+        // aanzetten
+        notarisVelden.forEach(v => v.disabled = false);
         notarisFieldset.classList.remove('disabled-group');
+    } else {
+        // uitzetten
+        notarisVelden.forEach(v => v.disabled = true);
+        notarisFieldset.classList.add('disabled-group');
     }
 }
 
-// event listeners voor de radio buttons
-testamentJa.addEventListener('change', () => toggleNotarisVelden(false));
-testamentNee.addEventListener('change', () => toggleNotarisVelden(true));
+// event listeners
+testamentJa.addEventListener('change', toggleNotarisVelden);
+testamentNee.addEventListener('change', toggleNotarisVelden);
 
 
-// DISABLED MAKEN KIES 1 van de 3
+
+
+
+
+// disabled 1 van de 3
 const bsn = document.getElementById('bsn-rsin-input');
 const becon = document.getElementById('beconnummer-input');
 const protocol = document.getElementById('protocolnummer-notaris-input');
@@ -67,27 +66,27 @@ const velden = [bsn, becon, protocol];
 
 // functie om andere velden uit te schakelen
 function checkInvullen(gekozen) {
-    velden.forEach(v => {
-        const fieldset = v.closest('fieldset'); // pak het parent fieldset voor label styling
-        if (v === gekozen) {
-            // het veld waar je in typt blijft actief
-            v.disabled = false;
-            fieldset.classList.remove('disabled-group');
-        } else {
-            if (gekozen.value.trim() !== '') {
-                // andere velden uitschakelen als dit veld iets heeft
+    if (gekozen.value.trim() !== '') {
+        // Als er iets in dit veld staat, zet de andere velden uit
+        velden.forEach(v => {
+            const fieldset = v.closest('fieldset');
+            if (v !== gekozen) {
                 v.disabled = true;
                 fieldset.classList.add('disabled-group');
             } else {
-                // andere velden weer inschakelen als dit veld leeg is
                 v.disabled = false;
                 fieldset.classList.remove('disabled-group');
             }
-        }
-    });
+        });
+    } else {
+        // Als dit veld leeg is, zet alles weer aan
+        velden.forEach(v => {
+            v.disabled = false;
+            v.closest('fieldset').classList.remove('disabled-group');
+        });
+    }
 }
 
-// luister naar elk veld wanneer er iets wordt ingevuld
 velden.forEach(v => {
     v.addEventListener('input', () => checkInvullen(v));
 });

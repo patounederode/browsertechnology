@@ -537,6 +537,7 @@ span {
 fieldset.disabled-group input {
     background-color: #eee;
     cursor: not-allowed;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor */
 }
 
 fieldset.disabled-group label {
@@ -552,4 +553,33 @@ fieldset.disabled-group input {
 fieldset.disabled-group label {
     color: #999;  /* grijze tekst voor label */
     cursor: not-allowed;
+}
+
+/* Disabled styling voor fieldsets */
+fieldset.disabled-group input {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+fieldset.disabled-group label {
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Validatie styling voor notaris inputs */
+input[id="protocolnummer-input"]:user-valid,
+input[id="naam-notaris"]:user-valid,
+input[id="tussenvoegsel-notaris"]:user-valid,
+input[id="datumnotaris"]:user-valid,
+input[id="overlijdensdatum-input"]:user-valid{
+    border: 2px solid #00a888;
+    background: #f3f3f3;
+}
+
+input[id="protocolnummer-input"]:user-invalid,
+input[id="naam-notaris"]:user-invalid,
+input[id="tussenvoegsel-notaris"]:user-invalid,
+input[id="datumnotaris"]:user-invalid,
+input[id="overlijdensdatum-input"]:user-invalid{
+    border: 2px solid #db0029;
 }
